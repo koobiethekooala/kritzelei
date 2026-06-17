@@ -114,15 +114,43 @@ svg {
   max-width: 22em;
 }
 .ident-cmd {
-  margin-top: 4px;
+  margin-top: 16px;
   color: var(--ink);
   font-family: var(--body);
   font-size: inherit;
+  font-weight: 500;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  position: relative;
+  width: fit-content;
+  transition: color 0.25s ease;
+}
+.ident-cmd::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .ident-cmd:hover {
   color: var(--grey);
+}
+.ident-cmd:hover::after {
+  transform: scaleX(1);
+}
+.ident-cmd-arrow {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ident-cmd:hover .ident-cmd-arrow {
+  transform: translateX(5px);
 }
 
 .run-wrap {

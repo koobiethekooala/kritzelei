@@ -72,8 +72,9 @@ export function Hero() {
             <span className="identtext">
               <b>Scribbles for everything.</b>
               <span className="ident-desc">
-                kritzelei generates deterministic scribbles from any string
-                identifier. Customizable, lightweight, works with any codebase.
+                kritzelei generates joyful svg scribbles from any string
+                identifier. Deterministic, configurable and lightweight. Works
+                with any React, Next.js, and JS framework.
               </span>
               <a
                 className="ident-cmd"
@@ -81,7 +82,10 @@ export function Hero() {
                 target="_blank"
                 rel="noreferrer"
               >
-                GitHub →
+                GitHub
+                <span className="ident-cmd-arrow" aria-hidden="true">
+                  →
+                </span>
               </a>
             </span>
           </div>
